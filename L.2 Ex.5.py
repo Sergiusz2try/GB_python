@@ -25,3 +25,5 @@ for n in range(0, 15):
     prices.pop(0)
 
 print(prices)
+prices.reverse()
+print(prices)
