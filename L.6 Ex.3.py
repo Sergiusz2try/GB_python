@@ -1,3 +1,5 @@
+import pickle
+
 with open('users.csv', encoding='utf-8') as users, open('hobby.csv', encoding='utf-8') as hobby:
     users_list = []
     for row in users:
@@ -19,3 +21,6 @@ with open('users.csv', encoding='utf-8') as users, open('hobby.csv', encoding='u
         print(users_hobby)
     else:
         print('Error: 1')
+
+    with open('users_hobby.cvs', 'wb') as f:
+        pickle.dump(users_hobby, f)
